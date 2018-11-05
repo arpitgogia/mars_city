@@ -181,8 +181,8 @@ class DeviceProxy:
 
     # Write then read a single attribute in a single network call.
     def write_read_attribute(self, write_attr_name: str, read_attr_name: str, value: str) -> Dict:
-        self.write_attribute(write_attr_name, value)
-        return self.read_attribute(read_attr_name)
+        self.write(write_attr_name, value)
+        return self.read(read_attr_name)
 
     # Write then read attribute(s) in a single network call
     def write_read_attributes(self, write_attr_dict: Dict, read_attr_names: List) -> Dict:
